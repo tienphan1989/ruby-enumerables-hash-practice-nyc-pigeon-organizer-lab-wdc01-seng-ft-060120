@@ -10,7 +10,7 @@ def nyc_pigeon_organizer(data)
     end
   end
   x=final.keys
-  data[:color] each do |bird_color, name|
+  data[:color].each do |bird_color, name|
     name.each do |bird_name|
       x.each do |value|
         if bird_name == value
@@ -19,7 +19,7 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  data[:gender] each do |gender_type, name|
+  data[:gender].each do |gender_type, name|
     name.each do |bird_name|
       x.each do |value|
         if bird_name == value
@@ -28,7 +28,7 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  data[:lives] each do |lives_wheres, name|
+  data[:lives].each do |lives_wheres, name|
     name.each do |bird_name|
       x.each do |value|
         if bird_name == value
