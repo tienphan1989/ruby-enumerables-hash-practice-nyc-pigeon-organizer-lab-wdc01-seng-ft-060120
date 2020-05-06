@@ -9,7 +9,7 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  x=final.keys
+  x=new_data.keys
   data[:color].each do |bird_color, name|
     name.each do |bird_name|
       x.each do |value|
