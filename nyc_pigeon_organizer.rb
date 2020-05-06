@@ -9,6 +9,7 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
+  x
   data[:color] each do |bird_color, name|
     
    
