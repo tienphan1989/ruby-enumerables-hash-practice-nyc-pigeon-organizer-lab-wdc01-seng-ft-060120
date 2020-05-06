@@ -9,39 +9,33 @@ def nyc_pigeon_organizer(data)
       end
     end
   end
-  x
+  x=final.keys
   data[:color] each do |bird_color, name|
-    
-   
-   
-  data[:color].each do |bird_color, name|
     name.each do |bird_name|
-      x.each do |item|
-        if bird_name === item
-          final[item][:color] << bird_color.to_s
-        end 
-      end 
-    end 
-  end 
-  data[:gender].each do |gender, type|
-    type.each do |bird_name|
-      x.each do |item|
-        if bird_name === item
-          final[item][:gender] << gender.to_s
-        end 
-      end 
-    end 
-  end 
-  data[:lives].each do |location, name|
+      x.each do |value|
+        if bird_name == value
+          new_data[value][:color].push(bird_color.to_s)
+        end
+      end
+    end
+  end
+  data[:gender] each do |gender_type, name|
     name.each do |bird_name|
-      x.each do |item|
-        if bird_name === item
-          final[item][:lives] << location
-        end 
-      end 
-    end 
-  end 
-  
-  return final 
-end 
-
+      x.each do |value|
+        if bird_name == value
+          new_data[value][:gender].push(gender_type.to_s)
+        end
+      end
+    end
+  end
+  data[:lives] each do |lives_wheres, name|
+    name.each do |bird_name|
+      x.each do |value|
+        if bird_name == value
+          new_data[value][:lives].push(lives_wheres.to_s)
+        end
+      end
+    end
+  end
+  return new_data
+end
