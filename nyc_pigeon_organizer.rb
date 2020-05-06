@@ -32,7 +32,7 @@ def nyc_pigeon_organizer(data)
     name.each do |bird_name|
       x.each do |value|
         if bird_name == value
-          new_data[value][:lives].push(lives_wheres.to_s)
+          new_data[value][:lives].push(lives_wheres)
         end
       end
     end
